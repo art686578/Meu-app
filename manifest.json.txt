@@ -1,0 +1,17 @@
+{
+  "name": "Meu Chat Global",
+  "short_name": "MeuChat",
+  "description": "Aplicativo de Chat Global e IA",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968756.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

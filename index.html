@@ -1,66 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Meu App Global</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="container">
+        <header>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <h1>Meu App Global</h1>
+        </header>
 
-  <nav id="sidebar">
-    <div class="sidebar-header">MENU PRINCIPAL</div>
-    <a href="#" onclick="showTab('chat')">💬 Chat Global</a>
-    <a href="#" onclick="showTab('ia')">🤖 Gemini IA</a>
-    <a href="#" onclick="showTab('despertador')">⏰ Despertador</a>
-    <a href="#" onclick="showTab('games')">🚀 Game Booster</a>
-  </nav>
+        <nav id="sidebar" class="sidebar">
+            <button onclick="showTab('chat')">Chat Global</button>
+            <button onclick="showTab('ia')">Conversar com IA</button>
+            <button onclick="showTab('alarme')">Despertador</button>
+            <button onclick="showTab('game')">Game Boost</button>
+        </nav>
 
-  <div class="container">
-    <section id="chat" class="tab-content active">
-      <h2>Chat Global</h2>
-      <div id="chat-messages"></div>
-      <div class="input-row">
-        <input type="text" id="chat-user" placeholder="Seu Nome">
-        <input type="text" id="chat-msg" placeholder="Mensagem...">
-        <button onclick="sendMsg()">ENVIAR</button>
-      </div>
-    </section>
+        <main id="content">
+            <section id="chat" class="tab-content active">
+                <div id="chat-messages" class="chat-box"></div>
+                <input type="text" id="chat-user" placeholder="Seu Nome">
+                <input type="text" id="chat-msg" placeholder="Mensagem...">
+                <button onclick="sendMsg()">ENVIAR</button>
+            </section>
 
-    <section id="ia" class="tab-content">
-      <h2>Inteligência Artificial</h2>
-      <div id="ia-box" class="chat-display">Gemini: Olá! Como posso ajudar você hoje?</div>
-      <input type="text" id="ia-input" placeholder="Pergunte algo...">
-      <button onclick="askIA()" style="background: #3b82f6;">PERGUNTAR</button>
-    </section>
+            <section id="ia" class="tab-content">
+                <div id="ia-box" class="chat-box"></div>
+                <input type="text" id="ia-input" placeholder="Pergunte à IA...">
+                <button onclick="askIA()">PERGUNTAR</button>
+            </section>
 
-    <section id="despertador" class="tab-content">
-      <h2>Despertador</h2>
-      <div class="card">
-        <input type="time" id="alarm-time">
-        <select id="alarm-sound">
-          <option value="https://www.soundjay.com/buttons/beep-01a.mp3">Bip Padrão</option>
-          <option value="https://www.soundjay.com/nature/ocean-wave-1.mp3">Oceano</option>
-        </select>
-        <button onclick="setAlarm()" style="background: #10b981;">ATIVAR ALARME</button>
-        <p id="alarm-status"></p>
-      </div>
-    </section>
+            </main>
+    </div>
 
-    <section id="games" class="tab-content">
-      <h2>Game Booster</h2>
-      <div class="card">
-        <div class="status-fps">Status: <span id="fps-text" style="color:#10b981">Otimizado</span></div>
-        <button onclick="boostFPS()" style="background: #ef4444;">🚀 LIMPAR MEMÓRIA & BOOST</button>
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #333;">
-        <button onclick="window.location.href='https://www.roblox.com/games'" style="background: #555;">ABRIR ROBLOX</button>
-      </div>
-    </section>
-  </div>
-
-  <audio id="alarm-audio"></audio>
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
