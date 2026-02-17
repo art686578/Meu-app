@@ -1,0 +1,46 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+body { background: #0f172a; color: white; overflow: hidden; }
+
+/* Sidebar */
+#sidebar {
+  position: fixed; left: -260px; width: 260px; height: 100%;
+  background: #1e293b; transition: 0.3s; z-index: 100; padding-top: 70px;
+  border-right: 1px solid #334155;
+}
+#sidebar.active { left: 0; }
+#sidebar .sidebar-header { padding: 10px 20px; font-size: 12px; color: #64748b; }
+#sidebar a {
+  display: block; padding: 15px 20px; color: #f8fafc;
+  text-decoration: none; border-bottom: 1px solid #334155;
+}
+
+.menu-btn {
+  position: fixed; top: 15px; left: 15px; z-index: 110;
+  background: #3b82f6; color: white; width: 45px; height: 45px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px; font-size: 24px; cursor: pointer;
+}
+
+/* Conteúdo */
+.container { padding: 80px 20px; height: 100vh; overflow-y: auto; }
+.tab-content { display: none; }
+.active { display: block; }
+
+h2 { margin-bottom: 20px; text-align: center; color: #3b82f6; }
+
+/* Chat Display */
+#chat-messages, .chat-display {
+  background: #1e293b; height: 300px; border-radius: 15px;
+  padding: 15px; overflow-y: auto; margin-bottom: 15px; border: 1px solid #334155;
+}
+
+input, select, button {
+  width: 100%; padding: 12px; margin-bottom: 10px;
+  border-radius: 10px; border: none; outline: none;
+}
+
+input, select { background: #334155; color: white; }
+button { background: #3b82f6; color: white; font-weight: bold; cursor: pointer; }
+button:active { transform: scale(0.98); }
+
+.card { background: #1e293b; padding: 20px; border-radius: 15px; }
